@@ -52,7 +52,6 @@
 }
 
 .person-midface {
-	background-color: rgb(228, 204, 127);
 	flex: 1 1 auto;
 	display: flex;
 }
@@ -62,7 +61,7 @@
 	flex: 1 1 auto;
 	background-color: white;
 	border-radius: 50%;
-	border: 1px solid black;
+	border: 2px solid black;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
@@ -76,20 +75,10 @@
 	height: 4rem;
 	border-radius: 50%;
 	position: relative;
-	left: 0;
-	right: 0;
 	transition: all 0.5s ease;
-}
-.eye-ball.left {
-	left: -2rem;
-}
-
-.eye-ball.right {
-	left: 2rem;
 }
 
 .person-lowface {
-	background-color: palegreen;
 	height: 7rem;
 	display: flex;
 	align-items: center;
@@ -98,7 +87,7 @@
 
 .face-mouth {
 	margin: 0.5rem 0;
-	height: 4rem;
+	height: 5rem;
 	width: 10rem;
 	border-radius: 0 0 10rem 10rem;
 	background-color: brown;
