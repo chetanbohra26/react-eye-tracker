@@ -19,11 +19,16 @@ class App extends Component {
     rCircle: [],
   };
   componentDidMount() {
-    this.eyeCheckLeft();
-    this.eyeCheckRight();
+    this.eyeCheck();
+    window.addEventListener("resize", this.eyeCheck);
   }
 
-  eyeCheckLeft() {
+  eyeCheck = () => {
+    this.eyeCheckLeft();
+    this.eyeCheckRight();
+  };
+
+  eyeCheckLeft = () => {
     const { eyeLeft } = this.state;
     const { top, bottom, left, right } =
       eyeLeft.current.getBoundingClientRect();
@@ -33,8 +38,8 @@ class App extends Component {
     //console.log("left", lx, ly);
 
     this.setState({ lx, ly });
-  }
-  eyeCheckRight() {
+  };
+  eyeCheckRight = () => {
     const { eyeRight } = this.state;
     const { top, bottom, left, right } =
       eyeRight.current.getBoundingClientRect();
@@ -44,7 +49,7 @@ class App extends Component {
     //console.log("right", rx, ry);
 
     this.setState({ rx, ry });
-  }
+  };
 
   handleMouseMove = (e) => {
     const x = e.clientX;
@@ -55,7 +60,7 @@ class App extends Component {
     if (x === prevX && y === prevY) return;
 
     const { lx, ly } = this.state;
-    console.log(x, y, lx, ly);
+    //console.log(x, y, lx, ly);
     const eyeBallLX = lx > x ? "-1.5rem" : "1.5rem";
     const eyeBallLY = ly > y ? "-1.5rem" : "1.5rem";
 
