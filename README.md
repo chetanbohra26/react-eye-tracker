@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Deployed at https://chase-me.herokuapp.com/
+Deployed at https://react-eye-tracker.vercel.app
 
 ## Available Scripts
 
